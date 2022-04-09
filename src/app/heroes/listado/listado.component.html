@@ -1,0 +1,16 @@
+<h3>Listado de Heroes</h3>
+<button (click)="borrandoHeroe(0)">
+    borrar
+</button>
+<ul>
+    <li *ngFor="let h of heroes; let i = index">{{ i+1 }} - {{ h }}</li>
+</ul>
+
+<div *ngIf="count; else noBorrado">
+    <h3>Listado de heroes eliminados</h3>
+    <p *ngFor="let b of eliminados">{{ b }}</p>
+</div>
+<ng-template #noBorrado>
+    <h3>no ha borrado nada</h3> no ha borrado nada
+</ng-template>
+
